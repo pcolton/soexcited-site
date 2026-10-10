@@ -1,4 +1,42 @@
 (() => {
+  const video = document.querySelector('.celebration video');
+  if (!video) return;
+
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let inView = !('IntersectionObserver' in window);
+  let attemptedPlayback = false;
+  let observer;
+
+  function startPlayback() {
+    if (!inView || motionPreference.matches || attemptedPlayback) return;
+    // Try only once so scrolling never overrides a visitor's pause.
+    attemptedPlayback = true;
+    observer?.disconnect();
+    video.muted = true;
+    video.play().then(() => {
+      if (motionPreference.matches) video.pause();
+    }).catch(() => {
+      // Browser autoplay restrictions leave the native play control available.
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver(entries => {
+      inView = entries[0].isIntersecting && entries[0].intersectionRatio >= 0.2;
+      startPlayback();
+    }, { threshold: [0, 0.2] });
+    observer.observe(video);
+  } else {
+    startPlayback();
+  }
+
+  motionPreference.addEventListener('change', () => {
+    if (motionPreference.matches) video.pause();
+    else startPlayback();
+  });
+})();
+
+(() => {
   const scenes = {
     kinds: {
       image: 'media/iphone-kinds.webp',
