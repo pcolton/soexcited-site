@@ -28,7 +28,7 @@
 .store-badge { display: inline-flex; width: 144px; }
 .store-badge img { width: 144px; height: 48px; }
 .closing-store { margin-top: 34px; }
-.closing-store .closing-availability { margin: 0; }
+.closing-store .closing-availability { margin: 0 auto; }
 .closing-store + p { font-size: 13px; margin-top: 8px; color: #665c4b; }
 @media (max-width: 760px) {
   .explore-options { width: 100%; }
