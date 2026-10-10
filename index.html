@@ -1,89 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#F3EEE4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#17130F" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
-<link rel="stylesheet" href="style.css?v=20261007b">
-<title>So Excited — countdowns to the good stuff</title>
-<meta name="description" content="A free countdown app for trips, concerts, birthdays and every big day. Every event is a ticket, on your Home Screen, iPhone Duo, iPad and Mac.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b74f21">
+  <title>So Excited — Count down to the good stuff.</title>
+  <meta name="description" content="A little more joy in the waiting. So Excited turns trips, birthdays, concerts and all your big days into beautiful countdown tickets.">
+  <link rel="icon" href="media/app-icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://soexcitedapp.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css?v=20261010">
+  <script src="home.js?v=20261010" defer></script>
+  <script src="store.js" defer></script>
 </head>
 <body>
-<header class="wrap site-header">
-  <a class="brand" href="./"><img src="icon.svg" alt="" width="32" height="32"><span>So Excited</span></a>
-  <nav class="nav" aria-label="Site"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
-</header>
-<main class="wrap">
-  <section class="hero">
-    <div>
-      <h1 class="display">Good things ahead.</h1>
-      <p class="lede">Count down to trips, concerts, birthdays and every big day. Every event is a ticket with the days to go, right on your Home Screen.</p>
-      <p class="free-line"><strong>Free to download and use</strong>, with up to 3 countdowns at a time. Want more? Upgrade to So Excited Plus.</p>
-      <div class="store">
-        <a href="app/" data-store-badge hidden><picture><source srcset="media/app-store-badge-white.svg" media="(prefers-color-scheme: dark)"><img src="media/app-store-badge-black.svg" alt="Download on the App Store" width="144" height="48"></picture></a>
-        <span class="soon" data-store-soon>Coming soon to the App Store</span>
-      </div>
-      <p class="platforms">Free for iPhone, iPhone Duo, iPad and Mac.</p>
-    </div>
-    <div class="ticket" role="img" aria-label="A ticket: up next, 11 days to Emma and Alex’s wedding on Sunday, October 18. Over halfway there.">
-      <div class="ticket-top">
-        <span class="label">Up next</span>
-        <div class="ticket-count"><span class="num">11</span><span class="unit">days</span></div>
-        <div class="ticket-badge" aria-hidden="true">💍</div>
-      </div>
-      <div class="ticket-stub">
-        <span class="notch left"></span><span class="notch right"></span>
-        <h3>Emma &amp; Alex’s wedding</h3>
-        <p>Sun, Oct 18</p>
-        <span class="chip">Over halfway there</span>
-      </div>
-    </div>
-  </section>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="hero-shell">
+    <header class="site-header wrap">
+      <a class="brand" href="#" aria-label="So Excited home"><img src="media/app-icon.png" alt="" width="43" height="43"><span>So Excited</span></a>
+      <nav aria-label="Main navigation"><a href="#look-inside">A look inside</a><a href="#devices">Your devices</a><a href="#plans">Free &amp; Plus</a></nav>
+      <a class="nav-pill" href="#coming-soon">Good things ahead <span aria-hidden="true">↗</span></a>
+    </header>
+  </div>
+  <main id="main">
+    <div class="hero-shell">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="mini-star" aria-hidden="true">✳</span> The countdown is part of the fun.</p>
+          <h1 id="hero-title">Count down<br>to the<br><em>good stuff.</em></h1>
+          <p class="hero-description">The trip. The tickets. The big birthday.<br>A little more joy in looking forward to it all.</p>
+          <div class="hero-actions"><a class="button cream" href="#look-inside">Meet your next big day <span aria-hidden="true">↓</span></a><a class="store-badge" href="app/" data-store-badge hidden><img src="media/app-store-badge-black.svg" alt="Download on the App Store" width="144" height="48"></a><span class="availability" data-store-soon>Coming soon to the App Store</span></div>
+        </div>
+        <figure class="hero-visual">
+          <div class="phone hero-phone"><img src="media/iphone-home.webp" alt="So Excited's stitched wallet holds colorful countdown tickets for a wedding, dinner with friends, and a trip to Lisbon." width="1000" height="2173" fetchpriority="high"><span class="island" aria-hidden="true"></span></div>
+          <div class="hero-seal" aria-hidden="true"><span>GOOD THINGS</span><strong>are<br>ahead.</strong><span>HOLD ON TO THAT.</span></div>
+          <figcaption><span aria-hidden="true">↖</span> Your plans. In a little pocket of joy.</figcaption>
+        </figure>
+      </section>
+  </div>
 
-  <section class="features" aria-label="Features">
-    <div class="feature"><div class="dot" style="background: var(--orange)" aria-hidden="true">✈︎</div><h2>A ticket for every event</h2><p>A big day count, a perforated stub, and a progress bar from the day you added it to the day itself.</p></div>
-    <div class="feature"><div class="dot" style="background: var(--blue)" aria-hidden="true">▦</div><h2>Widgets and reminders</h2><p>Home Screen and Lock Screen widgets, plus cheerful nudges halfway there, a week out and the day before.</p></div>
-    <div class="feature"><div class="dot" style="background: var(--green)" aria-hidden="true">✦</div><h2>Made for iPhone Duo</h2><p>Your countdowns beside each event on the open display, and right at hand when it’s closed. Synced with iCloud.</p></div>
-  </section>
+      <div class="event-band" aria-label="Count down to flights, birthdays, concerts, weddings, and just-because days"><div><span>Flights</span><b aria-hidden="true">✳</b><span>Birthdays</span><b aria-hidden="true">✳</b><span>Concerts</span><b aria-hidden="true">✳</b><span>Weddings</span><b aria-hidden="true">✳</b><span>Just because</span><b aria-hidden="true">✳</b></div></div>
 
-  <section class="pricing" aria-labelledby="pricing-title">
-    <h2 id="pricing-title" class="display">Free to use. Plus when you want more.</h2>
-    <div class="plans">
-      <div class="plan">
-        <p class="plan-name">So Excited</p>
-        <p class="plan-price">Free</p>
-        <ul>
-          <li>Up to 3 countdowns at a time</li>
-          <li>Home Screen and Lock Screen widgets</li>
-          <li>Reminders, share cards and Memories</li>
-          <li>iCloud sync across your devices</li>
-          <li>Two themes</li>
-        </ul>
-      </div>
-      <div class="plan plan-plus">
-        <p class="plan-name">So Excited Plus</p>
-        <p class="plan-price">$14.99 <small>/ year</small></p>
-        <ul>
-          <li>Unlimited countdowns</li>
-          <li>Every theme, plus a Custom theme in your own colors</li>
-          <li>Everything new in Plus</li>
-          <li>Everything in the free app</li>
-        </ul>
-      </div>
-    </div>
-    <p class="plans-note">Countdowns whose day has passed move to Memories and don’t count toward the 3. Upgrade any time from the app.</p>
-  </section>
-  <script src="store.js"></script>
-</main>
-<footer class="wrap site-footer">
-  <span>© 2026 Paul Colton</span>
-  <span><a href="mailto:hi@soexcitedapp.com">hi@soexcitedapp.com</a></span>
-</footer>
+      <section class="intro wrap section-space" id="look-inside" aria-labelledby="intro-title">
+        <div class="section-top"><span class="eyebrow">01 / A ticket to look forward to</span><span class="section-note">For plans of every size.</span></div>
+        <div class="intro-heading"><h2 id="intro-title">Make the wait<br>feel <em>wonderful.</em></h2><p>Every countdown gets its own ticket. Your next three tuck into the front of a stitched wallet, with the rest waiting in their slots. Something good is always up next.</p></div>
+        <div class="product-explorer" role="group" aria-label="A look inside So Excited">
+          <div class="explorer-copy">
+            <div class="explore-options" role="group" aria-label="Explore app features">
+              <div class="explorer-controls"><span class="rotation-status" data-rotation-status>Choose a feature to explore</span><button class="rotation-toggle" type="button" data-rotation-toggle aria-controls="feature-preview scene-caption" hidden><span data-rotation-icon aria-hidden="true">Ⅱ</span><span data-rotation-label>Pause tour</span></button></div>
+              <button class="explore-option selected" type="button" data-scene="kinds" aria-pressed="true" aria-controls="feature-preview scene-caption"><span class="option-number">01</span><span><strong>Whatever your kind of day.</strong><small>Trips, concerts, birthdays. Yours.</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
+              <button class="explore-option" type="button" data-scene="themes" aria-pressed="false" aria-controls="feature-preview scene-caption"><span class="option-number">02</span><span><strong>A little more you.</strong><small>Themes, colors, photos &amp; personality.</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
+              <button class="explore-option" type="button" data-scene="memories" aria-pressed="false" aria-controls="feature-preview scene-caption"><span class="option-number">03</span><span><strong>Keep the good bits.</strong><small>A ticket stub for every memory.</small></span><span class="option-arrow" aria-hidden="true">↗</span></button>
+            </div>
+            <div class="explorer-caption" id="scene-caption" aria-live="polite" aria-atomic="true"><h3 id="scene-title">A big day is whatever you make it.</h3><p id="scene-description">Choose a kind, add the date, and make it yours with an emoji, icon, or photo. From a once-in-a-lifetime trip to dinner with the gang.</p></div>
+          </div>
+          <figure class="explorer-stage" id="feature-preview"><span class="stage-word" aria-hidden="true">OH,<br>HAPPY<br>DAYS.</span><div class="phone explorer-phone"><img id="scene-image" src="media/iphone-kinds.webp" alt="Choose from event kinds including flights, celebrations, concerts, and friends." width="1000" height="2173" loading="lazy"><span class="island" aria-hidden="true"></span></div><figcaption class="stage-label" id="scene-label">YOUR DAY. YOUR TICKET.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="dayof section-space" aria-labelledby="dayof-title">
+        <div class="wrap">
+          <div class="section-top"><span class="eyebrow">02 / The best part</span><span class="section-note">That “it's finally here” feeling.</span></div>
+          <div class="dayof-heading"><h2 id="dayof-title">Then one day,<br>it's <span>today!</span></h2><div><p>Halfway there. One week to go. One more sleep. We’ll celebrate the little milestones with you.</p><p>And when the day arrives? The ticket tears.<br>The confetti flies. Go make a memory.</p></div></div>
+          <figure class="celebration"><video controls playsinline muted preload="none" poster="media/universal.webp" aria-label="Play the So Excited ticket celebration" aria-describedby="celebration-description"><source src="media/header.mp4" type="video/mp4"></video><figcaption id="celebration-description">A little celebration for the day you’ve been waiting for. Tickets tear, confetti falls, and past countdowns become stubs in Memories.</figcaption></figure>
+          <div class="everyday-notes"><div><span aria-hidden="true">◷</span><h3>Right there. Every day.</h3><p>Home Screen and Lock Screen widgets keep your next good thing in sight. Count in days, weeks, or sleeps.</p></div><div><span aria-hidden="true">✳</span><h3>A nudge, never a nag.</h3><p>Friendly reminders at the time you choose. Never more than one a day.</p></div><div><span aria-hidden="true">↗</span><h3>Pass the excitement on.</h3><p>Share any countdown as a card. Because some things are even better together.</p></div></div>
+        </div>
+      </section>
+
+      <section class="devices section-space wrap" id="devices" aria-labelledby="devices-title">
+        <div class="section-top"><span class="eyebrow">03 / Wherever life takes you</span><span class="section-note">iPhone · iPhone Duo · iPad · Mac</span></div>
+        <div class="devices-heading"><h2 id="devices-title">More room<br>for <em>good things.</em></h2><p>Made for iPhone Duo. Open it and your wallet opens too: your countdowns on one page, your chosen ticket on the other. Close it and your next big day is right there.</p></div>
+        <figure class="duo-display"><img src="media/duo-home.webp" alt="So Excited on the open iPhone Duo, with the wallet of upcoming events on the left and a large Lisbon countdown ticket on the right." width="1800" height="1266" loading="lazy"><figcaption>Open up. There's a lot to look forward to.</figcaption></figure>
+        <div class="sync-line"><strong>One life. All your devices.</strong><p>Your countdowns follow you across iPhone, iPad and Mac through your own iCloud account.</p><span>No accounts. No ads. No tracking.</span></div>
+      </section>
+
+      <section class="plans section-space" id="plans" aria-labelledby="plans-title">
+        <div class="wrap">
+          <div class="section-top"><span class="eyebrow">04 / Your next chapter</span><span class="section-note">Start with something to look forward to.</span></div>
+          <h2 id="plans-title">Big plans?<br><em>We've got room.</em></h2>
+          <div class="plan-grid">
+            <article class="plan-ticket"><div class="plan-top"><p class="eyebrow">SO EXCITED</p><h3>Free.</h3><p>A little pocket of good things.</p></div><div class="plan-stub"><ul><li>Up to 3 upcoming countdowns</li><li>Home Screen &amp; Lock Screen widgets</li><li>Milestones, reminders &amp; share cards</li><li>Memories and iCloud sync</li><li>Two themes</li></ul><span class="plan-status">A lovely place to start</span></div></article>
+            <article class="plan-ticket plus"><div class="plan-top"><p class="eyebrow">SO EXCITED PLUS</p><h3 class="plan-price">$14.99 <small>/ year</small></h3><p>For a life full of “can't wait.”</p></div><div class="plan-stub"><ul><li>Unlimited upcoming countdowns</li><li>Every theme</li><li>A Custom theme in your own colors</li><li>Everything in the free app</li></ul><span class="plan-status">USD · Upgrade any time in the app</span></div></article>
+          </div>
+          <p class="plan-footnote">Once a day has passed, its ticket moves to Memories and frees up a spot. More good things, always.</p>
+        </div>
+      </section>
+
+      <section class="closing wrap section-space" id="coming-soon" aria-labelledby="closing-title"><span class="closing-star" aria-hidden="true">✳</span><p class="eyebrow">Your next good thing is on its way.</p><h2 id="closing-title">So much to<br>be <em>excited</em> about.</h2><div class="closing-store"><a class="store-badge" href="app/" data-store-badge hidden><img src="media/app-store-badge-black.svg" alt="Download on the App Store" width="144" height="48"></a><p class="closing-availability" data-store-soon>Coming soon to the App Store</p></div><p>For iPhone, iPhone Duo, iPad and Mac.</p><a class="text-link" href="support.html">Get in touch <span aria-hidden="true">↗</span></a></section>
+    </main>
+  <footer class="site-footer wrap"><a class="brand" href="#"><img src="media/app-icon.png" alt="" width="32" height="32"><span>So Excited</span></a><span>© 2026 Paul Colton</span><nav aria-label="Legal and support"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></footer>
 </body>
 </html>

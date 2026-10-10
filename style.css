@@ -1,11 +1,11 @@
 /* So Excited — Sunday Paper (light) and Evening Edition (dark), from the app's themes. */
 :root {
-  --ground: #F3EEE4;
-  --card: #FFFDF8;
-  --ink: #221C17;
+  --ground: #fff5df;
+  --card: #f4ecd9;
+  --ink: #30291c;
   --sub: #6B6157;
   --line: #E4DACB;
-  --accent: #9A4718;
+  --accent: #b74f21;
   --yellow: #E2AE2A;
   --on-yellow: #2E2104;
   --yellow-deep: #C99A24;
@@ -129,3 +129,8 @@ img { max-width: 100%; height: auto; }
   .ticket-count .num { font-size: 84px; }
   .ticket-badge { width: 84px; height: 84px; font-size: 38px; }
 }
+
+/* Shared brand details for support and legal pages. */
+.brand { font-weight: 800; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.nav a { display: inline-flex; min-height: 44px; align-items: center; }
