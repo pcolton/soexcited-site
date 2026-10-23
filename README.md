@@ -39,10 +39,24 @@ Before release (or on a network error or an 8-second timeout), badges stay hidde
 coming-soon text stays visible, and `/app` returns to `/`. After a matching software
 listing appears, both badges link directly to `https://apps.apple.com/app/id<APPLE_ID>`
 and `/app` redirects there. Each visit checks again; no negative result is stored.
-JavaScript-disabled visits retain the homepage fallback. The redirect page also
+JavaScript-disabled visits get a manual homepage link; there is no meta refresh, so social crawlers can read the share metadata. The redirect page also
 has a manual homepage link if the script itself fails to load.
 
 Run `node --test tests/store.test.cjs` for isolated pre-release, post-release,
 lookup failure, timeout, invalid response, and page integration checks. The numeric
 ID used in tests is a synthetic fixture, never production configuration. These
 checks simulate Apple's responses; they do not establish actual app availability.
+
+## Social previews
+
+The homepage and `/app` include static Open Graph and Twitter large-image cards.
+Both use `https://soexcitedapp.com/media/social-preview.png` (1200 × 630 PNG),
+composed from the existing app icon, iPhone Duo, and Apple Watch artwork in the
+site palette. Copy makes no claim about current App Store availability.
+
+To rebuild the image, install Pillow and DejaVu Sans, then run
+`python design/render-social-preview.py` from the repository root.
+Run `node --test tests/*.test.cjs` to check redirects and static sharing metadata.
+After deployment, request both URLs with a crawler user agent and confirm the
+image returns HTTP 200 with `image/png`. Existing social previews may stay cached
+until the service fetches the URL again.

@@ -86,5 +86,6 @@ test('production excludes fixture; both pages load matching version and preserve
   assert.match(home, /src="store.js\?v=20261012" defer/);
   assert.match(share, /src="\/store.js\?v=20261012" defer/);
   assert.match(share, /data-redirect="1"/);
-  assert.match(share, /<noscript><meta http-equiv="refresh" content="0; url=\/">/);
+  assert.doesNotMatch(share, /http-equiv="refresh"/);
+  assert.match(share, /<a href="\/">So Excited<\/a>/);
 });
