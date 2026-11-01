@@ -49,7 +49,7 @@
       image: 'media/iphone-themes.webp',
       alt: 'The So Excited theme picker offers different color palettes for the wallet and tickets.',
       title: 'Wear your favorite colors.',
-      description: 'Sunday Paper and Ticket Booth come free. So Excited Plus adds six more, from Golden Hour to Night Market, and a Custom theme in your own colors.',
+      description: 'Sunday Paper and Ticket Booth come free. So Excited Plus adds 28 more on six shelves, from Golden Hour to Holiday Lights, each with a light and a dark look, and a Custom theme in your own colors.',
       label: 'A LITTLE MORE YOU.'
     },
     memories: {
